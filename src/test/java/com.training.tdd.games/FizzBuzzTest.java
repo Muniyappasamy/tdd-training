@@ -38,6 +38,15 @@ public class FizzBuzzTest{
         String result = fizzBuzz.playFizzBuzz(input);
         Assertions.assertEquals(expectedOutput,result);
     }
-   
+
+    @DisplayName("Multiple of 3 give fizz test With Different Inputs")
+    @ParameterizedTest
+    @ValueSource(ints = {3,9,123})
+    public void multipleOfThreeReturnFizzWithDifferentInputs(int input){
+        String expectedOutput = "fizz";
+        String result = fizzBuzz.playFizzBuzz(input);
+        Assertions.assertEquals(expectedOutput,result);
+    }
+
 
 }
