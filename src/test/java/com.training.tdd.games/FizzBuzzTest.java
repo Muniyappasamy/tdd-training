@@ -73,5 +73,5 @@ public class FizzBuzzTest{
         Assertions.assertEquals(input,result);
     }
 
-
+    
 }
