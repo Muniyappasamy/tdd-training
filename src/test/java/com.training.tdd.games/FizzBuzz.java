@@ -7,8 +7,17 @@ public class FizzBuzz {
 
     public String playFizzBuzz(int input) {
         String result;
-        result = (input % 3 == 0) ? "fizz" : String.valueOf(input);
-        result = (input % 5 == 0) ? "buzz" : String.valueOf(input);
+
+        if(input % 3 == 0 && input % 5 == 0){
+            result = "fizz buzz";
+        } else if (input % 3 == 0) {
+            result = "fizz";
+        } else if (input % 5 == 0) {
+            result = "buzz";
+        }
+        else{
+           result = String.valueOf(input);
+        }
 
         return result;
     }

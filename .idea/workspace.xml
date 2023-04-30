@@ -5,6 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b3daf59d-dacc-4b0c-8564-0c4cda0e27a1" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/com.training.tdd.games/FizzBuzz.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com.training.tdd.games/FizzBuzz.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/com.training.tdd.games/FizzBuzzTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com.training.tdd.games/FizzBuzzTest.java" afterDir="false" />
     </list>
@@ -56,7 +57,7 @@
       <command value="mvn clean install -U" />
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.FizzBuzzTest.fizzBuzzReturnSameNumber">
+  <component name="RunManager" selected="JUnit.FizzBuzzTest">
     <configuration name="TDDApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.training.tdd.games.TDDApplication" />
       <module name="tdd" />
@@ -66,6 +67,21 @@
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="FizzBuzzTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="tdd" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.training.tdd.games.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.training.tdd.games" />
+      <option name="MAIN_CLASS_NAME" value="com.training.tdd.games.FizzBuzzTest" />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -88,6 +104,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.FizzBuzzTest" />
         <item itemvalue="JUnit.FizzBuzzTest.fizzBuzzReturnSameNumber" />
         <item itemvalue="Application.TDDApplication" />
       </list>
