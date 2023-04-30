@@ -5,9 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b3daf59d-dacc-4b0c-8564-0c4cda0e27a1" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/test/java/com.training.tdd.games/FizzBuzz.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com.training.tdd.games/FizzBuzzTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com.training.tdd.games/FizzBuzz.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com.training.tdd.games/FizzBuzz.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com.training.tdd.games/FizzBuzzTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com.training.tdd.games/FizzBuzzTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -57,7 +57,7 @@
       <command value="mvn clean install -U" />
     </option>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="JUnit.FizzBuzzTest.fizzBuzzReturnSameNumber">
     <configuration name="TDDApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.training.tdd.games.TDDApplication" />
       <module name="tdd" />
@@ -71,8 +71,25 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="FizzBuzzTest.fizzBuzzReturnSameNumber" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="tdd" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.training.tdd.games.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.training.tdd.games" />
+      <option name="MAIN_CLASS_NAME" value="com.training.tdd.games.FizzBuzzTest" />
+      <option name="METHOD_NAME" value="fizzBuzzReturnSameNumber" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.FizzBuzzTest.fizzBuzzReturnSameNumber" />
         <item itemvalue="Application.TDDApplication" />
       </list>
     </recent_temporary>

@@ -12,5 +12,12 @@ public class FizzBuzzTest{
         FizzBuzz fizzBuzz = new FizzBuzz();
         Assertions.assertNotNull(fizzBuzz);
     }
+    @Test
+    public void fizzBuzzReturnSameNumber(){
+        FizzBuzz fizzBuzz = new FizzBuzz();
+        int input = 1;
+        int output = fizzBuzz.returnSameNumber(input);
+        Assertions.assertEquals(output,input);
+    }
 
 }
