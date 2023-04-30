@@ -6,6 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="b3daf59d-dacc-4b0c-8564-0c4cda0e27a1" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com.training.tdd.games/FizzBuzz.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com.training.tdd.games/FizzBuzz.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/com.training.tdd.games/FizzBuzzTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com.training.tdd.games/FizzBuzzTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />

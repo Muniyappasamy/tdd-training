@@ -6,8 +6,10 @@ public class FizzBuzz {
     }
 
     public String playFizzBuzz(int input) {
+        String result;
+        result = (input % 3 == 0) ? "fizz" : String.valueOf(input);
+        result = (input % 3 == 0) ? "buzz" : String.valueOf(input);
 
-        String result = (input%3 == 0)? "fizz":String.valueOf(input);
         return result;
     }
 }

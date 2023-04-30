@@ -47,6 +47,31 @@ public class FizzBuzzTest{
         String result = fizzBuzz.playFizzBuzz(input);
         Assertions.assertEquals(expectedOutput,result);
     }
+    @DisplayName("Multiple of 5 give buzz")
+    @Test
+    public void multipleOfThreeReturnbuzz(){
+        int input = 5;
+        String expectedOutput = "buzz";
+        String result = fizzBuzz.playFizzBuzz(input);
+        Assertions.assertEquals(expectedOutput,result);
+    }
+
+    @DisplayName("Multiple of 5 give buzz test With Different Inputs")
+    @ParameterizedTest
+    @ValueSource(ints = {5,20,200})
+    public void multipleOfFiveReturnFizzWithDifferentInputs(int input){
+        String expectedOutput = "buzz";
+        String result = fizzBuzz.playFizzBuzz(input);
+        Assertions.assertEquals(expectedOutput,result);
+    }
+
+    @DisplayName("Multiple of 5 give buzz test With Non multiple of 5 number Inputs")
+    @ParameterizedTest
+    @ValueSource(ints = {1,2,4})
+    public void nonmultipleOfFiveReturnInputAsOutput(int input){
+        String result = fizzBuzz.playFizzBuzz(input);
+        Assertions.assertEquals(input,result);
+    }
 
 
 }
