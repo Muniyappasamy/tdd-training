@@ -1,7 +1,6 @@
 package com.training.tdd.games.service;
 
 import com.training.tdd.games.model.Book;
-import com.training.tdd.games.repository.Books;
 import org.springframework.stereotype.Service;
 
 import java.util.*;
@@ -11,90 +10,99 @@ import java.util.stream.Stream;
 @Service
 public class BookService {
 
-    private Map<Books,Integer> books = new HashMap<>();
 
-    public List<String> findAllBooks() {
-        return Stream.of(Books.values()).map(Books::name).collect(Collectors.toList());
+    private Map<String, Integer> listOfBooksAndPrice = new HashMap<String, Integer>() {{
+        put("BOOK1", 50);
+        put("BOOK2", 50);
+        put("BOOK3", 50);
+        put("BOOK4", 50);
+        put("BOOK5", 50);
+    }};
+    private Map<Integer, Double> percentageMap = new HashMap<Integer, Double>() {{
+        put(5, 0.75);
+        put(4, 0.8);
+        put(3, 0.9);
+        put(2, 0.95);
+        put(1, 0.0);
+    }};
+    private static int BASE_PRICE = 50;
+
+    public Map<String, Integer> totalBooks = new HashMap<String, Integer>();
+
+
+    public Map<String, Integer> getAllBooks() {
+        return listOfBooksAndPrice;
     }
 
-    public int calculateBookPrice(List<Book> listOfBooks) {
 
-        for(Book book:listOfBooks){
-            int noOfBooks = book.getNoOfBooks();
-            while(noOfBooks > 0){
-                addBook(contains(book.getBookName()));
-                noOfBooks -- ;
+    public int getCalculatedPrice(List<Book> books) {
+        for (Book book : books) {
+            addToBookMap(book);
+        }
+        HashMap<String, Integer> remainingBooks = new HashMap<String, Integer>(totalBooks);
+        int noOfIteration = 5;
+        int minVal = Integer.MAX_VALUE;
+
+        int totalNoOfDistinctBooks = getNoOfTotalDistinctBooks(remainingBooks);
+        while (totalNoOfDistinctBooks > 0) {
+
+            int totalNoOfBooks = getNoOfTotalBooks(remainingBooks);
+
+            int result = 0;
+            while (totalNoOfBooks > 0) {
+
+                int bookIterate = totalNoOfBooks / totalNoOfDistinctBooks;
+                int remainNoOfBooks = 0;
+                if (bookIterate == 0) {
+                    remainNoOfBooks = totalNoOfBooks;
+                    result += getPriceWithDiscountPercentage(remainNoOfBooks);
+                    remainNoOfBooks = 0;
+                } else {
+                    remainNoOfBooks = totalNoOfBooks % totalNoOfDistinctBooks;
+                }
+                while (bookIterate > 0) {
+
+                    result += getPriceWithDiscountPercentage(totalNoOfDistinctBooks);
+                    bookIterate--;
+                }
+                totalNoOfBooks = remainNoOfBooks;
+
             }
 
+            if (result < minVal) {
+                minVal = result;
+            }
+            totalNoOfDistinctBooks--;
         }
 
-        int result = getOptimalPrice();
-        System.out.println("total : " + result);
-        return result;
-
-
+        return (minVal == Integer.MAX_VALUE ? 0 : minVal);
     }
 
-    public int getOptimalPrice(){
-        int total = 0;
-        HashMap<Books,Integer> remainingBooks = new HashMap<>(books);
-        while(getNumberOfBooks(remainingBooks) > 0){
-
-            int numberOfDistinctBooks = getNumberOfDistinctBooks(remainingBooks);
-            if(numberOfDistinctBooks == 5){
-                total+= (int )5* 50 * (25/100);
-            }
-            else if(numberOfDistinctBooks == 4){
-                total+= (int )4* 50 * (20/100);
-            }
-            else if(numberOfDistinctBooks == 3){
-                total+= (int )3* 50 * (10/100);
-            }
-            else{
-                total+= 50;
-            }
-
-            removeOneIssueOfEachBook((HashMap<Books, Integer>) remainingBooks);
-        }
-
-        return total;
-    }
-    public static Books contains(String test) {
-
-        for (Books c : Books.values()) {
-            if (c.name().equals(test)) {
-                return c;
-            }
-        }
-
-        return null;
-    }
-
-    private void removeOneIssueOfEachBook(HashMap<Books, Integer> remainingBooks) {
-        Set<Books> distinctBooks = new HashSet<>(remainingBooks.keySet());
-        for(Books book: distinctBooks){
-            int amount = remainingBooks.get(book);
-            if(amount == 1){
-                remainingBooks.remove(book);
-            }
-            else {
-                remainingBooks.put(book,amount-1);
-            }
+    public void addToBookMap(Book book) {
+        if (listOfBooksAndPrice.containsKey(book.getBookName())) {
+            totalBooks.put(book.getBookName(), book.getNoOfBooks());
         }
     }
 
-    private int getNumberOfDistinctBooks(HashMap<Books, Integer> remainingBooks) {
-        return remainingBooks.values().stream().reduce(0,(i,j) -> i+j);
+    private int getPriceWithDiscountPercentage(int noOfBooks) {
+
+        if (noOfBooks == 1) return BASE_PRICE;
+
+        return (int) (noOfBooks * BASE_PRICE * percentageMap.get(noOfBooks));
     }
 
-    private int getNumberOfBooks(HashMap<Books, Integer> remainingBooks) {
-        return remainingBooks.size();
+    private int getNoOfTotalBooks(HashMap<String, Integer> books) {
+
+        return books.values().stream().reduce(0, (i, j) -> (i + j));
     }
-    public void addBook(Books book) {
-        int amt =0 ;
-        if(books.containsKey(book)){
-            amt = books.get(book);
-        }
-        books.put(book,amt+1);
+
+    private int getNoOfTotalDistinctBooks(HashMap<String, Integer> books) {
+
+        return books.size();
     }
 }
+
+
+
+
+

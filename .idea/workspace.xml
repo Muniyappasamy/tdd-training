@@ -5,15 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b3daf59d-dacc-4b0c-8564-0c4cda0e27a1" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/training/tdd/games/controller/BookStoreController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/training/tdd/games/model/Book.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/training/tdd/games/repository/Books.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/training/tdd/games/service/BookService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/training/tdd/games/controller/BookStoreControllerTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/training/tdd/games/service/BookServiceTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com.training.tdd.games/FizzBuzz.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com.training.tdd.games/FizzBuzzTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/training/tdd/games/controller/BookStoreController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/training/tdd/games/controller/BookStoreController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/training/tdd/games/repository/Books.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/training/tdd/games/service/BookService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/training/tdd/games/service/BookService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -25,6 +23,7 @@
       <list>
         <option value="Enum" />
         <option value="Class" />
+        <option value="JUnit5 Test Class" />
       </list>
     </option>
   </component>
@@ -49,9 +48,13 @@
   </component>
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
+    &quot;Notification.DisplayName-DoNotAsk-Download Shared Index&quot;: &quot;Shared indexes available&quot;,
+    &quot;Notification.DoNotAsk-Download Shared Index&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary&quot;: &quot;JUnit5&quot;,
+    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5&quot;: &quot;&quot;,
     &quot;last_opened_file_path&quot;: &quot;C:/Users/WIN/Downloads/BookDiscount&quot;,
     &quot;settings.editor.selected.configurable&quot;: &quot;reference.settings.project.maven.repository.indices&quot;
   }
@@ -65,6 +68,13 @@
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\WIN\Downloads\tdd-fizzbuzz\src\test\java" />
     </key>
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="" />
+    </key>
+    <key name="CreateTestDialog.RecentsKey">
+      <recent name="com.training.tdd.games.service" />
+      <recent name="com.training.tdd.games.controller" />
+    </key>
   </component>
   <component name="RunAnythingCache">
     <option name="myCommands">
@@ -75,7 +85,7 @@
       <command value="mvn clean install -U" />
     </option>
   </component>
-  <component name="RunManager" selected="Application.TDDApplication">
+  <component name="RunManager" selected="JUnit.BookStoreControllerTest.checkCalculatedPriceTest">
     <configuration name="TDDApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.training.tdd.games.TDDApplication" />
       <module name="tdd" />
@@ -89,32 +99,64 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="FizzBuzzTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="BookServiceTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="tdd" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.training.tdd.games.*" />
+          <option name="PATTERN" value="com.training.tdd.games.service.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="com.training.tdd.games" />
-      <option name="MAIN_CLASS_NAME" value="com.training.tdd.games.FizzBuzzTest" />
+      <option name="PACKAGE_NAME" value="com.training.tdd.games.service" />
+      <option name="MAIN_CLASS_NAME" value="com.training.tdd.games.service.BookServiceTest" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="FizzBuzzTest.fizzBuzzReturnSameNumber" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="BookServiceTest.multiPercentagediscountbooks" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="tdd" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.training.tdd.games.*" />
+          <option name="PATTERN" value="com.training.tdd.games.service.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="com.training.tdd.games" />
-      <option name="MAIN_CLASS_NAME" value="com.training.tdd.games.FizzBuzzTest" />
-      <option name="METHOD_NAME" value="fizzBuzzReturnSameNumber" />
+      <option name="PACKAGE_NAME" value="com.training.tdd.games.service" />
+      <option name="MAIN_CLASS_NAME" value="com.training.tdd.games.service.BookServiceTest" />
+      <option name="METHOD_NAME" value="multiPercentagediscountbooks" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="BookStoreControllerTest.checkCalculatedPriceTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="tdd" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.training.tdd.games.controller.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.training.tdd.games.controller" />
+      <option name="MAIN_CLASS_NAME" value="com.training.tdd.games.controller.BookStoreControllerTest" />
+      <option name="METHOD_NAME" value="checkCalculatedPriceTest" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="BookStoreControllerTest.getallbooksTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="tdd" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.training.tdd.games.controller.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.training.tdd.games.controller" />
+      <option name="MAIN_CLASS_NAME" value="com.training.tdd.games.controller.BookStoreControllerTest" />
+      <option name="METHOD_NAME" value="getallbooksTest" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -122,9 +164,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.BookStoreControllerTest.checkCalculatedPriceTest" />
+        <item itemvalue="JUnit.BookStoreControllerTest.getallbooksTest" />
+        <item itemvalue="JUnit.BookServiceTest" />
         <item itemvalue="Application.TDDApplication" />
-        <item itemvalue="JUnit.FizzBuzzTest" />
-        <item itemvalue="JUnit.FizzBuzzTest.fizzBuzzReturnSameNumber" />
+        <item itemvalue="JUnit.BookServiceTest.multiPercentagediscountbooks" />
       </list>
     </recent_temporary>
   </component>
@@ -138,5 +182,41 @@
       <updated>1682783456449</updated>
     </task>
     <servers />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/training/tdd/games/service/BookService.java</url>
+          <line>51</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/training/tdd/games/service/BookService.java</url>
+          <line>38</line>
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/training/tdd/games/controller/BookStoreController.java</url>
+          <line>25</line>
+          <option name="timeStamp" value="4" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/training/tdd/games/service/BookService.java</url>
+          <line>33</line>
+          <option name="timeStamp" value="6" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/com/training/tdd/games/controller/BookStoreControllerTest.java</url>
+          <line>50</line>
+          <option name="timeStamp" value="8" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/com/training/tdd/games/controller/BookStoreControllerTest.java</url>
+          <line>62</line>
+          <option name="timeStamp" value="9" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
